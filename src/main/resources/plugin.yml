@@ -1,0 +1,6 @@
+name: gBungee
+main: org.mcgames.gbungee.gBungee
+version: 0.0.6-Snapshot
+author: Horrorpenguin
+# This is used so that we can automagically override default BungeeCord behavior.
+softDepends: ["cmd_find", "cmd_list"]
