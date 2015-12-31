@@ -75,11 +75,6 @@
                                     <shadedPattern>org.mcgames.gbungee.internal.jedis
                                     </shadedPattern>
                                 </relocation>
-                                <relocation>
-                                    <pattern>redis.clients.util</pattern>
-                                    <shadedPattern>org.mcgames.gbungee.internal.jedisutil
-                                    </shadedPattern>
-                                </relocation>
                             </relocations>
                         </configuration>
                     </execution>
@@ -100,6 +95,7 @@
             </plugin>
         </plugins>
     </build>
+
 
 
 </project>

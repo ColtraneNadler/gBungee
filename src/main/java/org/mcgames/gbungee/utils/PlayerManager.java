@@ -5,6 +5,8 @@ import net.md_5.bungee.api.connection.ProxiedPlayer;
 import org.mcgames.gbungee.gBungee;
 import redis.clients.jedis.Jedis;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -43,11 +45,11 @@ public class PlayerManager {
         Jedis rs = gBungee.getJedis();
 
         System.out.println("works2");
-        Set<String> proxies = rs.smembers(gBungee.PROXIES);
+        Map<String, String> proxies = rs.hgetAll(gBungee.PROXIES);
 
         System.out.println("works3");
-        for(String p : proxies)
-            if(rs.sismember(gBungee.PROXY_PLAYERS + p, uuid))
+        for(Map.Entry<String, String> p : proxies.entrySet())
+            if(rs.sismember(gBungee.PROXY_PLAYERS + p.getKey(), uuid))
                 return true;
 
         System.out.println("works4");
@@ -77,7 +79,7 @@ public class PlayerManager {
      */
     public static int getCount() {
         Jedis rs = gBungee.getJedis();
-        Set<String> proxies = rs.smembers(gBungee.PROXIES);
+        Set<String> proxies = gBungee.getServers();
 
         int count = 0;
 

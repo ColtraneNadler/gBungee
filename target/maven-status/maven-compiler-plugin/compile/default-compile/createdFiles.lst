@@ -1,5 +1,6 @@
 org/mcgames/gbungee/commands/GList.class
 org/mcgames/gbungee/utils/PlayerManager.class
+org/mcgames/gbungee/gBungee$1$1.class
 org/mcgames/gbungee/commands/GList$1.class
 org/mcgames/gbungee/commands/Send$1.class
 org/mcgames/gbungee/listeners/ProxyPingListener$1.class
@@ -7,6 +8,7 @@ org/mcgames/gbungee/utils/Color.class
 org/mcgames/gbungee/commands/Alert$1$1.class
 org/mcgames/gbungee/gBungee.class
 org/mcgames/gbungee/gBungee$1.class
+org/mcgames/gbungee/gBungee$2.class
 org/mcgames/gbungee/utils/Utils.class
 org/mcgames/gbungee/redis/DatabaseManager.class
 org/mcgames/gbungee/commands/Alert$1.class
